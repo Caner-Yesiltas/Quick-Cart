@@ -9,15 +9,19 @@ const Header = () => {
 
   const changeTheme = () => {
     const root = document.getElementById('root');
+
+    root.style.height = '100%';
+ 
+
     setTheme(!theme);
     if (theme) {
-      root.style.backgroundColor = 'black';
-      root.style.color = '#fff';
+      root.style.background = 'linear-gradient(to right, #e0c3fc, #8ec5fc)';
+      root.style.color = '#000';
     } else {
+      root.style.background = '';
       root.style.backgroundColor = '#fff';
       root.style.color = 'black';
     }
-   
   };
 
   return (
@@ -42,7 +46,7 @@ const Header = () => {
 
         <div>
           {theme ? (
-            <FaMoon className='icon' onClick={changeTheme}  />
+            <FaMoon className='icon' onClick={changeTheme} />
           ) : (
             <CiLight className='icon' onClick={changeTheme} />
           )}

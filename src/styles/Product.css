@@ -1,0 +1,12 @@
+.image {
+  width: 11.25rem;
+  height: 15rem;
+}
+
+.card {
+  width: 12.5rem;
+  height: 26.25rem;
+  box-shadow: 0.0625rem 0.25rem 0.1875rem lightskyblue;
+  border-radius: 0.625rem;
+  margin: 2rem;
+}
