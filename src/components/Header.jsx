@@ -18,7 +18,7 @@ const Header = () => {
       root.style.background = 'linear-gradient(to right, #e0c3fc, #8ec5fc)';
       root.style.color = '#000';
     } else {
-      root.style.background = '';
+      root.style.background = 'none';
       root.style.backgroundColor = '#fff';
       root.style.color = 'black';
     }

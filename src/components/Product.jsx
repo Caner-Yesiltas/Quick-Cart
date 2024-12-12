@@ -10,7 +10,9 @@ const Product = ({product}) => {
       <div >
         <p  style={{textAlign:'center', height:'3.125rem'}} >{title}</p>
         <h3 style={{textAlign:'center'}}   >{price}💲</h3>
-
+      </div>
+      <div className='flex-row' style={{margin:'1rem'}}>
+        <button className='detail-button' > View Details </button>
       </div>
     </div>
   )

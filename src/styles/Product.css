@@ -1,6 +1,10 @@
 .image {
   width: 11.25rem;
   height: 15rem;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Disable text and image selection highlighting */
 }
 
 .card {
@@ -9,4 +13,18 @@
   box-shadow: 0.0625rem 0.25rem 0.1875rem lightskyblue;
   border-radius: 0.625rem;
   margin: 2rem;
+}
+
+.detail-button {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(81, 80, 80);
+  color: #fff;
+}
+
+.detail-button:hover {
+  cursor: pointer;
+  background-color: rgb(105, 212, 101);
+  transition: all 0.6s;
 }
