@@ -10,8 +10,8 @@ function App() {
   return (
     <div>
       <PageContainer>
-        <Loading />
         <Header />
+        <Loading />
         <RouterConfig />
       </PageContainer>
     </div>

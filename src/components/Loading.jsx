@@ -1,21 +1,18 @@
 import React, { useState } from 'react';
 import CircularProgress from '@mui/material/CircularProgress';
 import { Backdrop } from '@mui/material';
+import { useSelector } from 'react-redux';
 
 const Loading = () => {
-  const [open, setOpen] = useState(false);
-  const handleClose = () => {
-    setOpen(false);
-  };
-  const handleOpen = () => {
-    setOpen(true);
-  };
+
+  const {loading} = useSelector((store)=> store.product)
+
+
   return (
     <div>
       <Backdrop
         sx={(theme) => ({ color: '#fff', zIndex: theme.zIndex.drawer + 1 })}
-        open={open}
-        onClick={handleClose}
+        open={loading}
       >
         <CircularProgress color='inherit' />
       </Backdrop>
