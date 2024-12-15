@@ -3,15 +3,17 @@ import '../styles/Header.css';
 import { CiShoppingBasket } from 'react-icons/ci';
 import { CiLight } from 'react-icons/ci';
 import { FaMoon } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [theme, setTheme] = useState(false);
+
+const navigate = useNavigate();
 
   const changeTheme = () => {
     const root = document.getElementById('root');
 
     root.style.height = '100%';
- 
 
     setTheme(!theme);
     if (theme) {
@@ -33,7 +35,7 @@ const Header = () => {
         paddingTop: '2rem',
       }}
     >
-      <div className='flex-row'>
+      <div className='flex-row' style={{cursor:'pointer'}} onClick={()=>navigate("/")}   > 
         <img src='/logo.png' alt='logo' className='logo' />
         <p className='logo-text'> Caner Corp. </p>
       </div>

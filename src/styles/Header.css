@@ -1,29 +1,28 @@
-.logo{
-    width:60px;
-    height:60px;
+.logo {
+  width: 60px;
+  height: 60px;
 }
 
-
-.logo-text{
-    font-family: arial;
-    font-size: .9375rem;
-    font-weight: 600;
+.logo-text {
+  font-family: arial;
+  font-size: 0.9375rem;
+  font-weight: 600;
 }
 
-
-.search-input{
-    border:none;
-    border-bottom: 1px solid lightgrey;
-    padding: .3125rem .625rem;
-    outline: none;
-    margin-right: .625rem;
+.search-input {
+  border: none;
+  border-bottom: 1px solid lightgrey;
+  padding: 0.3125rem 0.625rem;
+  outline: none;
+  margin-right: 0.625rem;
 }
 
-.icon{
-    font-size:20px;
-    margin-right:10px;
+.icon {
+  font-size: 20px;
+  margin-right: 10px;
 }
 
-.icon:hover{
-    cursor: pointer;
+.icon:hover {
+  cursor: pointer;
 }
+
