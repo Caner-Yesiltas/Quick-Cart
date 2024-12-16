@@ -28,3 +28,7 @@
   transition: all 0.6s;
   cursor: pointer;
 }
+
+.drawer{
+  width:500px !important;
+}
