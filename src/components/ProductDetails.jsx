@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { setSelectedProduct } from '../redux/slices/productSlice';
 import { CiCirclePlus } from 'react-icons/ci';
 import { CiCircleMinus } from 'react-icons/ci';
-import { addToBasket } from '../redux/slices/basketSlice';
+import { addToBasket, calculateBasket } from '../redux/slices/basketSlice';
 
 
 const ProductDetails = () => {
@@ -34,7 +34,8 @@ const ProductDetails = () => {
       description,
       count
     }
-    dispatch(addToBasket(payload))
+    dispatch(addToBasket(payload));
+    dispatch(calculateBasket());
   }
 
 

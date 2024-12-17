@@ -1,35 +1,53 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Header from './components/Header';
 import Loading from './components/Loading';
 import RouterConfig from './config/RouterConfig';
 import PageContainer from './container/PageContainer';
 import './styles/App.css';
 import Drawer from '@mui/material/Drawer';
-
+import { setDrawer,calculateBasket } from './redux/slices/basketSlice';
+import { useEffect } from 'react';
 
 
 
 function App() {
-  const {products} = useSelector((store)=>store.basket);
+  const {products, drawer, totalAmount} = useSelector((store)=>store.basket);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(calculateBasket());
+  }, [])
+  
+
   return (
     <div>
       <PageContainer>
         <Header />
         <Loading />
-        <Drawer  className='drawer' sx={{padding:'20px'}}  anchor='right' open={true} >
-    {
-      products && products.map((product) => {
-        return(
+        <Drawer className='drawer' sx={{ padding: '20px' }}  anchor='right' open={drawer} onClose={()=>dispatch(setDrawer())} >
+          {
+            products && products.map((product) => {
+              return (
+                <div key={product.id}>
+                  <div className='flex-row' style={{ padding: '20px' }}>
+                    <img style={{ marginRight: '5px' }} src={product.image} width={50} height={50} alt="" />
+                    <p style={{ width: '320px', marginRight: '5px' }}>{product.title}({product.count})</p>
+                    <p style={{ fontWeight: 'bold', marginRight: '10px', width: '60px' }}>{product.price}TL</p>
+                    <button style={{ padding: '5px', borderRadius: '5px', backgroundColor: 'rgb(185, 76, 76)', border: 'none', color: '#fff', width: '50px' }}>sil</button>
+                  </div>
+                <div>
+               
+                </div>
+             
+                </div>
+                
+              )
+            })
+          }
           <div>
-            <img src={product.image} width={50} height={50} alt="" />
-            <p>{product.title}</p>
-            <p>{product.price}</p>
+          <p style={{ textAlign: 'center' }}> Total Amount : {totalAmount} </p>
           </div>
-        )
-      })
-    }
-      </Drawer>
-
+        </Drawer>
         <RouterConfig />
       </PageContainer>
     </div>
