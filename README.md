@@ -110,7 +110,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 Caner Yesiltas - caneryesiltas1@gmail.com
 
-Project Link: [https://github.com/caneryesiltas/quick-cart](https://github.com/caneryesiltas/quick-cart)
+Project Link: [https://quick-cart-gules.vercel.app/](https://quick-cart-gules.vercel.app/)
 
 ---
 
