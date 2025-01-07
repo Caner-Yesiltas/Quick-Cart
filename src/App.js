@@ -65,7 +65,7 @@ function App() {
                         width: '50px',
                       }}
                     >
-                      sil
+                      Delete
                     </button>
                   </div>
                   <div></div>
