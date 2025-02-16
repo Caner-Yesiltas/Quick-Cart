@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>🛍️ Modern E-Commerce Application</h1>
+  <h1> 🧺 Modern E-Commerce Application</h1>
   <h3>
     👉 <a href="https://quick-cart-gules.vercel.app/">Live Demo</a> 👈
   </h3>
