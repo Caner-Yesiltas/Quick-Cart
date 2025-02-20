@@ -115,5 +115,5 @@ Project Link: [https://quick-cart-gules.vercel.app/](https://quick-cart-gules.ve
 ---
 
 <div align="center">
-  Made with ❤️ by Caner Yesiltas
+  Made with by Caner Yesiltas
 </div>
